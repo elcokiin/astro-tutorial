@@ -1,0 +1,25 @@
+---
+import Social from './Social.astro'
+const socialConfigs = [
+  {
+    platform: "github",
+    username: "elcokiin"
+  },
+  {
+    platform: "linkedin",
+    username: "diego-tenjo"
+  },
+] 
+---
+
+<footer>
+  <ul>
+  {
+    socialConfigs.map(({platform, username}) => (
+      <li>
+        <Social platform={platform} username={username} />
+      </li>
+    ), [] )
+  }
+  </ul>
+</footer>
